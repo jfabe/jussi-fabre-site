@@ -332,3 +332,26 @@ body.page-ai .hero-grid{
 .role-box .eyebrow{ color:var(--signal-light); }
 .role-box h3{ color:#fff; font-size:22px; margin-top:8px; font-weight:600; }
 .role-box p{ margin:0; font-size:15px; line-height:1.65; color:#C6D2D8; }
+
+/* ---------- Data centre page ---------- */
+:root{ --grid:#3E8A68; --grid-light:#93CDB0; }
+body.page-dc{ --accent: var(--grid); --accent-light: var(--grid-light); }
+body.page-dc .btn-primary{ color:#fff; }
+body.page-dc .hero-grid{
+  background-image:
+    linear-gradient(rgba(147,205,176,0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147,205,176,0.10) 1px, transparent 1px);
+}
+body.page-dc .phase::before, body.page-dc .exp-cell .pattern{ color:var(--grid); }
+body.page-dc .role-box .eyebrow{ color:var(--grid-light); }
+.split.split-4{ grid-template-columns:repeat(2,1fr); }
+@media(max-width:700px){ .split.split-4{ grid-template-columns:1fr; } }
+.split-card.dc .k, .split-card.dc .go{ color:var(--grid); }
+.split-card.dc:hover{ background:#EDF5F0; }
+.exp-cell ul.plain li{ display:block; font-size:14px; line-height:1.5; padding:5px 0; }
+.dc-stack{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:8px; }
+@media(max-width:800px){ .dc-stack{ grid-template-columns:1fr 1fr; } }
+.dc-stack div{ background:var(--paper); padding:16px 14px; }
+.dc-stack .lvl{ font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); }
+.dc-stack .what{ font-family:'Fraunces', serif; font-size:16px; color:var(--navy); margin-top:4px; font-weight:600; }
+.dc-stack .me{ font-size:13px; color:var(--muted); margin-top:6px; line-height:1.5; }
