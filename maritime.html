@@ -159,44 +159,88 @@
 <section class="alt" id="ship-networks">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Ship networks &amp; OT</div>
-      <h2>Where the bridge meets the network</h2>
+      <div class="eyebrow">Advisory · Ship networks &amp; OT security</div>
+      <h2>From class requirement to a network that sails</h2>
     </div>
     <div class="about-body" style="margin-bottom:32px">
-      <p>Propulsion, dynamic positioning, bridge control, alarm management and CCTV
-        now run over shipboard industrial Ethernet, with cellular and satellite
-        links back to shore. I read these networks from both sides: as the officer
-        on watch who depends on them, and as an OT security architect who designs
-        and assesses them against class rules and IEC 62443.</p>
+      <p>Since IACS UR E26 and E27 became mandatory for ships contracted from
+        1&nbsp;July&nbsp;2024, cyber resilience is a class condition, not an IT
+        wish-list. Owners, yards and system integrators now have to prove that
+        propulsion, DP, bridge and alarm networks are segmented, documented and
+        maintainable — while the vessel keeps to its schedule.</p>
+      <p>The advisory service bridges three worlds that rarely share a vocabulary:
+        the bridge team that depends on the systems, the class surveyor who
+        approves them, and the suppliers who build them. The result is a
+        vendor-neutral architecture that passes survey first time and that the
+        crew can actually live with.</p>
     </div>
-    <div class="exp-grid">
+
+    <div class="exp-grid cols-3">
       <div class="exp-cell">
-        <h3>Shipboard network infrastructure</h3>
+        <h3>01 · Assess</h3>
+        <p class="note">Where does the vessel or fleet stand today?</p>
         <ul>
-          <li class="tagline">Marine type-approved managed &amp; unmanaged Ethernet switches — fanless, &minus;40&nbsp;to&nbsp;+70&nbsp;&deg;C, isolated ports, compass safe distance</li>
-          <li class="tagline">Redundant ring topologies with millisecond-range failover for propulsion, DP &amp; bridge systems</li>
-          <li class="tagline">Segregation by design — VLANs, QoS priority queues, IGMP snooping, port-based firewalls between subsystems</li>
-          <li class="tagline">IEC 62443-4-2 SL2-certified switches as hardened network components</li>
-          <li class="tagline">Vessel-to-shore links — industrial 4G / 5G and 450&nbsp;MHz cellular routers, industrial WLAN</li>
-          <li class="tagline">Ethernet extenders over legacy copper for retrofits without re-cabling</li>
-          <li class="tagline">Secure remote access (VPN) for vendor service, with central configuration management and zero-touch deployment</li>
+          <li class="tagline">Gap analysis against UR E26 / E27 and IEC 62443</li>
+          <li class="tagline">OT asset inventory and zone &amp; conduit model</li>
+          <li class="tagline">Vessel-to-shore and vendor remote-access risk review</li>
+          <li class="tagline">Prioritised findings, sized for budget and dry-dock windows</li>
+        </ul>
+        <p class="note" style="margin:14px 0 0"><strong>Outcome:</strong> a clear, costed picture for management and class.</p>
+      </div>
+      <div class="exp-cell">
+        <h3>02 · Design</h3>
+        <p class="note">What should the network look like?</p>
+        <ul>
+          <li class="tagline">Reference architecture — segmentation, redundant rings, QoS, firewalled conduits</li>
+          <li class="tagline">Vendor-neutral selection of type-approved switches, routers and IEC 62443-4-2 components</li>
+          <li class="tagline">Connectivity strategy — 4G / 5G / 450&nbsp;MHz, satellite, WLAN</li>
+          <li class="tagline">Secure remote-access model for service partners</li>
+        </ul>
+        <p class="note" style="margin:14px 0 0"><strong>Outcome:</strong> a specification yards and suppliers can quote against.</p>
+      </div>
+      <div class="exp-cell">
+        <h3>03 · Deliver &amp; verify</h3>
+        <p class="note">How does it reach approval — and stay compliant?</p>
+        <ul>
+          <li class="tagline">Owner's representative between yard, suppliers and class</li>
+          <li class="tagline">Supplier E27 documentation review, FAT / SAT witnessing</li>
+          <li class="tagline">Class survey preparation and finding closure</li>
+          <li class="tagline">Crew handover, change management and lifecycle patching plan</li>
+        </ul>
+        <p class="note" style="margin:14px 0 0"><strong>Outcome:</strong> approval on schedule and a vessel that stays compliant.</p>
+      </div>
+    </div>
+
+    <div class="exp-grid" style="margin-top:1px; border-top:0">
+      <div class="exp-cell">
+        <h3>The added value</h3>
+        <ul>
+          <li class="tagline"><strong>Fewer surprises at survey</strong> — requirements addressed in design, not discovered in sea trials</li>
+          <li class="tagline"><strong>Independent advice</strong> — no hardware to sell, so recommendations follow the vessel's needs</li>
+          <li class="tagline"><strong>Operational realism</strong> — controls designed by someone who has stood the watch they protect</li>
+          <li class="tagline"><strong>One interlocutor</strong> — Finnish, French and English across owners, yards and class</li>
+          <li class="tagline"><strong>Retrofit-aware</strong> — reuse of existing cabling and hardware where it is safe to do so</li>
         </ul>
       </div>
       <div class="exp-cell">
-        <h3>Standards &amp; approvals</h3>
+        <h3>Frameworks applied</h3>
         <ul>
           <li><span>IACS UR E26 — Cyber resilience of ships</span><span class="yrs">Class</span></li>
-          <li><span>IACS UR E27 — Cyber resilience of on-board systems &amp; equipment</span><span class="yrs">Class</span></li>
-          <li><span>IACS UR E10 — Type testing of electrical &amp; electronic equipment</span><span class="yrs">Class</span></li>
+          <li><span>IACS UR E27 — On-board systems &amp; equipment</span><span class="yrs">Class</span></li>
+          <li><span>IACS UR E10 — Type testing of equipment</span><span class="yrs">Class</span></li>
           <li><span>DNV · BV · LR · RINA type approval</span><span class="yrs">Class</span></li>
-          <li><span>IEC 60945 — Marine navigation &amp; radiocommunication equipment, environmental &amp; EMC</span><span class="yrs">IEC</span></li>
-          <li><span>IEC 61162-460 — Network safety &amp; security for bridge / navigation systems</span><span class="yrs">IEC</span></li>
-          <li><span>IEC 62443-3-3 / 4-2 — Zones &amp; conduits, system and component security levels</span><span class="yrs">IEC</span></li>
+          <li><span>IEC 60945 — Navigation equipment, environment &amp; EMC</span><span class="yrs">IEC</span></li>
+          <li><span>IEC 61162-460 — Bridge network security</span><span class="yrs">IEC</span></li>
+          <li><span>IEC 62443-3-3 / 4-2 — System &amp; component security</span><span class="yrs">IEC</span></li>
         </ul>
-        <p class="note" style="margin:14px 0 0">Adjacent domains with the same network discipline: offshore wind
-          and shore-power substations (IEC 61850-3), ports and water infrastructure,
-          and rolling stock (EN 50155).</p>
+        <p class="note" style="margin:14px 0 0">Same discipline, adjacent sectors: offshore wind and
+          shore-power substations (IEC 61850-3), ports, water infrastructure and
+          rolling stock (EN 50155).</p>
       </div>
+    </div>
+
+    <div class="cta-row" style="margin-top:32px">
+      <a class="btn btn-primary" href="mailto:jussi.fabre@gmail.com?subject=Ship%20network%20%26%20E26%2FE27%20advisory">Discuss a vessel or fleet →</a>
     </div>
   </div>
 </section>
