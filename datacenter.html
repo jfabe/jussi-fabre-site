@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-dc">
+<body class="page-dc theme-warm">
 
 <header class="nav" id="siteNav">
   <div class="nav-inner">
@@ -48,10 +48,37 @@
       <span>FI · FR · EN</span>
     </div>
     <div class="cta-row">
-      <a class="btn btn-primary" href="mailto:jussi.fabre@gmail.com?subject=Data%20centre%20project">Discuss a project</a>
-      <a class="btn btn-ghost" href="#stack">The stack ↓</a>
-      <a class="btn btn-ghost" href="#project">The project ↓</a>
+      <a class="btn btn-primary" href="mailto:jussi.fabre@gmail.com?subject=Data%20centre%20project%20call">Book a project call</a>
+      <a class="btn btn-ghost" href="#site">See the approach ↓</a>
     </div>
+  </div>
+</section>
+
+<section class="mx-stats" aria-label="Key facts">
+  <div class="wrap">
+    <div class="mx-stat-grid">
+      <div class="mx-stat">
+        <div class="mx-num">8 Apr 2025</div>
+        <div class="mx-cap">Finnish Cybersecurity Act (NIS2) in force for data centre operators</div>
+      </div>
+      <div class="mx-stat">
+        <div class="mx-num"><span data-count="25">25</span>+ yrs</div>
+        <div class="mx-cap">Carrier backbones, interconnection &amp; OT security</div>
+      </div>
+      <div class="mx-stat">
+        <div class="mx-num">DE-CIX</div>
+        <div class="mx-cap">Interconnection operations at one of the world&#8217;s largest internet exchanges</div>
+      </div>
+      <div class="mx-stat">
+        <div class="mx-num">FI · FR · EN</div>
+        <div class="mx-cap">One interlocutor for developers, authorities and contractors</div>
+      </div>
+    </div>
+    <ul class="mx-trust" aria-label="Working principles">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Independent &amp; vendor-neutral</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Member of FISC &amp; PIA, Technology Industries of Finland</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Experience in Katakri-audited environments</li>
+    </ul>
   </div>
 </section>
 
@@ -80,6 +107,188 @@
       <span class="flag">Commissioning</span>
       <span class="flag">Azure · GCP · AWS</span>
     </div>
+  </div>
+</section>
+
+<section class="alt" id="site">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Site networks &amp; OT security</div>
+      <h2>The plant behind the racks</h2>
+    </div>
+    <div class="about-body" style="margin-bottom:36px">
+      <p>Tenants buy uptime, but uptime depends on power, cooling and safety systems
+        that are industrial OT — often installed by a dozen integrators, each with
+        its own remote access. Designing those networks as zones and conduits from
+        day one is cheaper than retrofitting them after the first audit.</p>
+    </div>
+    <figure class="mx-figure" id="mxFigure" data-mode="flat">
+      <div class="mx-figbar">
+        <div class="mx-figtitle">
+          <span class="mono">INTERACTIVE</span>
+          One compromised remote session — how far does it reach?
+        </div>
+        <div class="mx-toggle" role="group" aria-label="Network model">
+          <button type="button" data-mode="flat" aria-pressed="true">Before<span class="mx-hide-sm"> · flat network</span></button>
+          <button type="button" data-mode="seg" aria-pressed="false">After<span class="mx-hide-sm"> · zones &amp; conduits</span></button>
+        </div>
+      </div>
+      <svg class="mx-ship" viewBox="0 0 960 400" role="img" aria-labelledby="mxT mxD">
+        <title id="mxT">Data centre site network zones</title>
+        <desc id="mxD">Side view of a data centre with six zones: power and EPMS, cooling plant, BMS and fire safety, access and security, white space IT halls, and the meet-me room DMZ, connected to the internet.</desc>
+
+        <g class="mx-shore">
+          <rect x="16" y="22" width="176" height="56" rx="6"/>
+          <text x="104" y="46" class="mx-t-strong" text-anchor="middle">INTERNET</text>
+          <text x="104" y="64" class="mx-t-small" text-anchor="middle">vendors · tenants · SOC</text>
+        </g>
+        <path class="mx-link" d="M192,50 C260,40 321,70 321,120"/>
+        <text x="300" y="70" class="mx-t-small mx-hide-sm">CARRIER FIBRE · VPN</text>
+
+        <rect class="mx-ground" x="0" y="330" width="960" height="70"/>
+        <path class="mx-ground-line" d="M0,330 H960"/>
+
+        <g class="mx-vessel mx-static">
+        <rect class="mx-building" x="200" y="120" width="660" height="210" rx="4"/>
+        <path class="mx-cable" d="M115,330 V352 H643 V316"/>
+
+        <g class="mx-flat">
+          <path d="M321,120 C250,160 160,200 115,280"/>
+          <path d="M321,120 C420,80 560,70 700,97"/>
+          <path d="M321,120 C380,150 400,200 360,230"/>
+          <path d="M321,120 C290,200 290,250 321,292"/>
+          <path d="M321,120 C450,130 560,160 643,197"/>
+          <path d="M321,120 V164"/>
+        </g>
+
+        <g class="mx-seg">
+          <path d="M426,164 H434 V292 H442"/>
+          <path d="M426,230 H434"/>
+          <path d="M426,292 H434"/>
+          <path d="M643,258 V268"/>
+          <path d="M844,97 H852 V292 H844"/>
+          <g class="mx-fw">
+            <rect x="424" y="158" width="12" height="12" rx="2"/>
+            <rect x="424" y="224" width="12" height="12" rx="2"/>
+            <rect x="424" y="286" width="12" height="12" rx="2"/>
+            <rect x="637" y="257" width="12" height="12" rx="2"/>
+            <rect x="846" y="180" width="12" height="12" rx="2"/>
+            <rect x="109" y="334" width="12" height="12" rx="2"/>
+          </g>
+        </g>
+
+        <path class="mx-atk mx-atk-link" d="M192,50 C260,40 321,70 321,120"/>
+        <g class="mx-atk-flat">
+          <path class="mx-atk" d="M321,120 C250,160 160,200 115,280"/>
+          <path class="mx-atk" d="M321,120 C420,80 560,70 700,97"/>
+          <path class="mx-atk" d="M321,120 C380,150 400,200 360,230"/>
+          <path class="mx-atk" d="M321,120 C290,200 290,250 321,292"/>
+          <path class="mx-atk" d="M321,120 C450,130 560,160 643,197"/>
+        </g>
+        <g class="mx-atk-seg">
+          <path class="mx-atk" d="M321,120 V140"/>
+          <g class="mx-blocked">
+            <rect x="62" y="150" width="96" height="26" rx="13"/>
+            <text x="110" y="167.5" text-anchor="middle">CONTAINED</text>
+          </g>
+        </g>
+
+        <g class="mx-zone" data-z="1" tabindex="0" role="button" aria-label="Zone 1: Power and EPMS">
+          <rect x="40" y="230" width="150" height="100" rx="5"/>
+          <circle cx="60" cy="280.0" r="11"/><text x="60" y="284.5" class="mx-badge" text-anchor="middle">1</text>
+          <text x="78" y="285.0" class="mx-label">Power · EPMS</text>
+        </g>
+        <g class="mx-zone" data-z="2" tabindex="0" role="button" aria-label="Zone 2: Cooling plant">
+          <rect x="560" y="78" width="280" height="38" rx="5"/>
+          <circle cx="580" cy="97.0" r="11"/><text x="580" y="101.5" class="mx-badge" text-anchor="middle">2</text>
+          <text x="598" y="102.0" class="mx-label">Cooling plant</text>
+        </g>
+        <g class="mx-zone mx-zone--dmz" data-z="b" tabindex="0" role="button" aria-label="Meet-me room and DMZ">
+          <rect x="216" y="136" width="210" height="56" rx="5"/>
+          <circle cx="236" cy="164.0" r="11"/><text x="236" y="168.5" class="mx-badge" text-anchor="middle">B</text>
+          <text x="254" y="169.0" class="mx-label">Meet-me room · DMZ</text>
+        </g>
+        <g class="mx-zone" data-z="3" tabindex="0" role="button" aria-label="Zone 3: BMS and fire safety">
+          <rect x="216" y="202" width="210" height="56" rx="5"/>
+          <circle cx="236" cy="230.0" r="11"/><text x="236" y="234.5" class="mx-badge" text-anchor="middle">3</text>
+          <text x="254" y="235.0" class="mx-label">BMS &amp; fire safety</text>
+        </g>
+        <g class="mx-zone" data-z="4" tabindex="0" role="button" aria-label="Zone 4: Access and physical security">
+          <rect x="216" y="268" width="210" height="48" rx="5"/>
+          <circle cx="236" cy="292.0" r="11"/><text x="236" y="296.5" class="mx-badge" text-anchor="middle">4</text>
+          <text x="254" y="297.0" class="mx-label">Access &amp; security</text>
+        </g>
+        <g class="mx-zone" data-z="5" tabindex="0" role="button" aria-label="Zone 5: White space and IT halls">
+          <rect x="442" y="136" width="402" height="122" rx="5"/>
+          <circle cx="462" cy="197.0" r="11"/><text x="462" y="201.5" class="mx-badge" text-anchor="middle">5</text>
+          <text x="480" y="202.0" class="mx-label">White space · IT halls</text>
+        </g>
+        <g class="mx-core">
+          <rect x="442" y="268" width="402" height="48" rx="5"/>
+          <text x="643" y="296" class="mx-t-small" text-anchor="middle">OT BACKBONE · FIREWALLED CONDUITS</text>
+        </g>
+        </g>
+      </svg>
+<script type="application/json" id="mxData">{"start": "1", "captions": {"flat": "<strong>Flat site network.</strong> A compromised integrator VPN or tenant link reaches power, cooling and fire systems — the plant that keeps every rack alive.", "seg": "<strong>Zones &amp; conduits.</strong> The intrusion stops at the meet-me room DMZ. Power, cooling and safety systems sit in their own zones, reachable only through monitored, firewalled conduits."}, "zones": [{"id": "1", "name": "Power · EPMS", "lives": "MV substation, UPS, generators, switchgear, EPMS / SCADA", "risk": "Vendor remote access to UPS and generator controllers, legacy Modbus with no authentication.", "fix": "Dedicated zone, read-only telemetry to DCIM, vendor sessions approved per job and recorded.", "refs": "IEC 62443-3-3 · IEC 61850 · NIS2"}, {"id": "2", "name": "Cooling plant", "lives": "Chillers, CDUs, liquid cooling loops, heat reuse to district heating", "risk": "Cloud-connected controllers and a heat-reuse interface to an external utility.", "fix": "Utility interface through the DMZ only, setpoint changes logged, fail-safe local control.", "refs": "IEC 62443-3-3 · EN 50600 · EU energy reporting"}, {"id": "3", "name": "BMS &amp; fire safety", "lives": "Building management, fire detection and suppression, leak detection", "risk": "Integrator laptops and default credentials left behind after commissioning.", "fix": "Separate safety network, credentials rotated at handover, documented change management.", "refs": "IEC 62443-2-4 · EN 54"}, {"id": "4", "name": "Access &amp; security", "lives": "CCTV, access control, intrusion detection, visitor management", "risk": "IP cameras with weak firmware becoming the pivot into building OT.", "fix": "Own zone with no route to power or cooling, firmware lifecycle owned by a named party.", "refs": "IEC 62443-4-2 · EN 50131"}, {"id": "5", "name": "White space · IT halls", "lives": "Tenant racks, GPU clusters, DCIM sensors, in-row cooling", "risk": "Tenant-to-facility pivot through shared management networks.", "fix": "Hard separation of tenant networks from facility OT; DCIM data flows one way, read-only.", "refs": "EN 50600 · ISO/IEC 27001 · NIS2"}, {"id": "b", "name": "Meet-me room · DMZ", "lives": "Carrier fibre, cross-connects, remote-access gateway, jump hosts", "risk": "A single shared VPN account for all integrators and vendors.", "fix": "One controlled entry point, MFA, session recording and logging to a SOC.", "refs": "NIS2 · Cybersecurity Act · IEC 62443-3-3"}]}</script>
+      <figcaption class="mx-caption" id="mxCaption" aria-live="polite"></figcaption>
+      <div class="mx-explorer">
+        <div class="mx-legend" role="list"></div>
+        <div class="mx-detail" id="mxDetail" aria-live="polite"></div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section id="sectors">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Business models</div>
+      <h2>Four ways data centres are built and run</h2>
+    </div>
+    <div class="about-body" style="margin-bottom:32px">
+      <p>Who owns the building, who owns the racks and how fast it has to be built
+        change where the risk sits. The advice follows the business model, not a
+        generic checklist.</p>
+    </div>
+    <div class="sx-grid">
+      <article class="sx-card">
+        <div class="sx-top"><div class="sx-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14h18M7 6.5h.01M7 11.5h.01M7 16.5h.01"/></svg></div>
+          <div><div class="sx-k">Build model</div><h3>Hyperscale self-build</h3></div></div>
+        <p class="sx-who"><b>Who</b>Hyperscaler project teams, their EPC contractors and local partners</p>
+        <p class="sx-why">Global design standards and aggressive schedules meet Finnish permits, grid connections and authorities that work in Finnish.</p>
+        <ul><li>Local interface for regulation, authorities and contractors</li><li>OT security basis of design for power and cooling</li><li>Commissioning evidence that satisfies global and local audit</li></ul>
+        <div class="sx-std"><span>IEC 62443-3-2</span><span>NIS2</span><span>EN 50600</span></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-top"><div class="sx-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="5" height="18" rx="1"/><rect x="9.5" y="3" width="5" height="18" rx="1"/><rect x="16" y="3" width="5" height="18" rx="1"/><path d="M4.5 7h2M11 7h2M17.5 7h2"/></svg></div>
+          <div><div class="sx-k">Operating model</div><h3>Colocation &amp; wholesale</h3></div></div>
+        <p class="sx-who"><b>Who</b>Colocation operators, wholesale developers, regulated and public-sector tenants</p>
+        <p class="sx-why">Every tenant audit asks the same questions about the facility — and NIS2 now makes the operator answerable for them.</p>
+        <ul><li>Tenant-to-facility separation and remote-access governance</li><li>Audit-ready evidence packs for customer due diligence</li><li>NIS2 and Cybersecurity Act readiness</li></ul>
+        <div class="sx-std"><span>ISO/IEC 27001</span><span>NIS2</span><span>IEC 62443</span></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-top"><div class="sx-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+          <div><div class="sx-k">Build model</div><h3>AI &amp; GPU campuses</h3></div></div>
+        <p class="sx-who"><b>Who</b>Neocloud and AI-infrastructure developers building high-density campuses</p>
+        <p class="sx-why">Liquid cooling, very high rack density and heat reuse into district heating add new OT systems — and new outside interfaces.</p>
+        <ul><li>Cooling-plant and CDU network security</li><li>Secure heat-reuse interface to the local utility</li><li>Commissioning readiness for fast-track builds</li></ul>
+        <div class="sx-std"><span>IEC 62443</span><span>EN 50600</span><span>EU energy reporting</span></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-top"><div class="sx-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10v12M8 22h8"/><circle cx="12" cy="8" r="2"/><path d="M8 4.5a5.5 5.5 0 0 0 0 7M16 4.5a5.5 5.5 0 0 1 0 7M5 2a9.5 9.5 0 0 0 0 12M19 2a9.5 9.5 0 0 1 0 12"/></svg></div>
+          <div><div class="sx-k">Operating model</div><h3>Edge &amp; telco sites</h3></div></div>
+        <p class="sx-who"><b>Who</b>Telecom and fibre operators, edge and tower companies</p>
+        <p class="sx-why">Hundreds of unmanned sites with the same design: one weak template is copied everywhere, one good one protects them all.</p>
+        <ul><li>Standardised secure site template and zero-touch rollout</li><li>Out-of-band access over 4G / 5G / 450 MHz</li><li>Interconnection and route-diversity design</li></ul>
+        <div class="sx-std"><span>IEC 62443</span><span>NIS2</span><span>BGP / MPLS</span></div>
+      </article>
+    </div>
+    <div class="em-head">
+      <div class="eyebrow">Engagement models</div>
+      <h3>Choose the way of working that fits the project</h3>
+    </div>
+    <div class="em-grid"><div class="em"><div class="n">01</div><h4>Fixed-scope assessment</h4><p>Site or design review against NIS2 and IEC 62443, delivered as a prioritised, costed roadmap.</p><span class="fit">Fits: due diligence, early design</span></div><div class="em"><div class="n">02</div><h4>Developer&#8217;s representative</h4><p>Embedded on the developer&#8217;s side through design, procurement, construction and handover.</p><span class="fit">Fits: new campuses, expansions</span></div><div class="em"><div class="n">03</div><h4>Fractional security lead</h4><p>Part-time OT security lead for an operator&#8217;s portfolio, on a monthly retainer.</p><span class="fit">Fits: operators building their function</span></div><div class="em"><div class="n">04</div><h4>Specialist subcontracting</h4><p>OT security and connectivity capacity for EPCs, integrators and consultancies.</p><span class="fit">Fits: peak loads, niche expertise</span></div></div>
   </div>
 </section>
 
@@ -212,11 +421,12 @@
 <footer id="contact">
   <div class="wrap">
     <div class="eyebrow">Get in touch</div>
-    <h2>Building a data centre in Finland or the Nordics?</h2>
-    <p>Open to data centre projects as a role, a consulting engagement or project-based
-      work: on the developer's side, with an EPC contractor or with an operator.</p>
+    <h2>Building or running a data centre in Finland or the Nordics?</h2>
+    <p>A 30-minute call is enough to map where the site stands and what NIS2 and
+      your tenants will ask for next. Open to consulting engagements, project roles
+      and work alongside EPCs and operators.</p>
     <div class="contact-row">
-      <a class="btn btn-primary" href="mailto:jussi.fabre@gmail.com">jussi.fabre@gmail.com</a>
+      <a class="btn btn-primary" href="mailto:jussi.fabre@gmail.com?subject=Data%20centre%20project%20call">jussi.fabre@gmail.com</a>
       <a class="btn btn-ghost" href="tel:+358451391677">+358 45 139 1677</a>
       <a class="btn btn-ghost" href="https://fi.linkedin.com/in/jussi-fabre" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
@@ -228,5 +438,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="diagram.js"></script>
+<script src="motion.js"></script>
 </body>
 </html>

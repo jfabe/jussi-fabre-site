@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-maritime">
+<body class="page-maritime theme-warm">
 
 <header class="nav" id="siteNav">
   <div class="nav-inner">
@@ -63,11 +63,11 @@
         <div class="mx-cap">IACS UR E26 / E27 mandatory for new ship contracts</div>
       </div>
       <div class="mx-stat">
-        <div class="mx-num">270 ECTS</div>
+        <div class="mx-num"><span data-count="270">270</span> ECTS</div>
         <div class="mx-cap">Master-mariner education, Novia UAS</div>
       </div>
       <div class="mx-stat">
-        <div class="mx-num">25+ yrs</div>
+        <div class="mx-num"><span data-count="25">25</span>+ yrs</div>
         <div class="mx-cap">Critical-infrastructure networks &amp; security</div>
       </div>
       <div class="mx-stat">
@@ -75,6 +75,11 @@
         <div class="mx-cap">One interlocutor for owners, yards and class</div>
       </div>
     </div>
+    <ul class="mx-trust" aria-label="Working principles">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Independent &amp; vendor-neutral</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Member of FISC &amp; PIA, Technology Industries of Finland</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Hands-on class survey experience</li>
+    </ul>
   </div>
 </section>
 
@@ -151,8 +156,10 @@
 
         <!-- sea -->
         <rect class="mx-sea" x="0" y="330" width="960" height="70"/>
-        <path class="mx-wave" d="M0,332 Q40,326 80,332 T160,332 T240,332 T320,332 T400,332 T480,332 T560,332 T640,332 T720,332 T800,332 T880,332 T960,332"/>
+        <path class="mx-wave" d="M-160,332 Q-120,326 -80,332 T0,332 T80,332 T160,332 T240,332 T320,332 T400,332 T480,332 T560,332 T640,332 T720,332 T800,332 T880,332 T960,332 T1040,332 T1120,332"/>
+        <path class="mx-wave mx-wave--2" d="M-160,344 Q-120,339 -80,344 T0,344 T80,344 T160,344 T240,344 T320,344 T400,344 T480,344 T560,344 T640,344 T720,344 T800,344 T880,344 T960,344 T1040,344 T1120,344"/>
 
+        <g class="mx-vessel">
         <!-- hull + superstructure -->
         <path class="mx-hull" d="M58,248 H892 L864,336 Q856,352 830,352 H118 Q92,352 84,336 Z"/>
         <path class="mx-super" d="M612,248 V104 Q612,96 620,96 H836 Q846,96 848,104 L860,248 Z"/>
@@ -242,9 +249,11 @@
           <rect x="392" y="304" width="448" height="36" rx="5"/>
           <text x="616" y="327" class="mx-t-small" text-anchor="middle">REDUNDANT RING · FIREWALLED CONDUITS</text>
         </g>
+        </g>
 
       </svg>
 
+<script type="application/json" id="mxData">{"start": "2", "captions": {"flat": "<strong>Flat network.</strong> One compromised remote-access session or infected laptop sees every system on board — from crew Wi-Fi to propulsion control.", "seg": "<strong>Zones &amp; conduits.</strong> The same intrusion stops at the boundary. Each zone talks only to what it must, through monitored, firewalled conduits — the structure UR E26 expects to see."}, "zones": [{"id": "1", "name": "Bridge &amp; navigation", "lives": "ECDIS, radar, autopilot, GNSS, AIS, VDR", "risk": "Chart updates on USB sticks, GNSS spoofing, vendor laptops plugged into the bridge network.", "fix": "IEC 61162-460 gateway towards other networks, removable-media control, read-only data flows to IT.", "refs": "UR E27 · IEC 61162-460 · IEC 60945"}, {"id": "2", "name": "Propulsion &amp; DP", "lives": "Engine &amp; power management, thrusters, dynamic positioning", "risk": "Always-on vendor remote service, flat Layer-2 broadcast domains, unpatched HMIs.", "fix": "Dedicated zone on a redundant ring with fast failover; vendor sessions only on request, approved and logged.", "refs": "UR E26 · UR E27 · IEC 62443-3-3"}, {"id": "3", "name": "Alarm, monitoring &amp; safety", "lives": "AMS, fire detection, watertight doors, safety systems", "risk": "Traffic floods from cameras or IT degrading time-critical alarms.", "fix": "Deterministic QoS, strict separation from IT and CCTV, documented change management.", "refs": "UR E26 · UR E10 · IEC 62443-3-3"}, {"id": "4", "name": "Cargo &amp; ballast", "lives": "Loading computer, ballast control, ramp &amp; door systems", "risk": "Shared accounts and engineering stations that bridge into other systems.", "fix": "Zone per system owner, conduit rules by explicit need, maintained asset inventory.", "refs": "UR E26 · IEC 62443-3-3"}, {"id": "5", "name": "Business IT &amp; crew", "lives": "Admin PCs, email, crew and passenger Wi-Fi", "risk": "Phishing and untrusted personal devices — the most common way in.", "fix": "Kept outside OT entirely: no route to OT zones, separate SSIDs and VLANs, managed endpoints.", "refs": "UR E26 (untrusted network boundary)"}, {"id": "b", "name": "Boundary · DMZ", "lives": "SATCOM, 4G / 5G / 450 MHz routers, VPN concentrator, update server", "risk": "Single compromised remote-access account reaching every system on board.", "fix": "One controlled entry point, MFA VPN, staged updates, logging to a shore SOC.", "refs": "UR E26 · IEC 62443-4-2 components"}]}</script>
       <figcaption class="mx-caption" id="mxCaption" aria-live="polite"></figcaption>
 
       <div class="mx-explorer">
@@ -319,7 +328,60 @@
   </div>
 </section>
 
-<section id="voyage">
+<section id="sectors">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Sectors &amp; models</div>
+      <h2>One discipline, four industries</h2>
+    </div>
+    <div class="about-body" style="margin-bottom:32px">
+      <p>The same zones-and-conduits thinking protects any moving or remote
+        industrial asset. Maritime is the core; energy, critical services and rail
+        share its networks, its hardware and increasingly its regulation.</p>
+    </div>
+    <div class="sx-grid">
+      <article class="sx-card">
+        <div class="sx-top"><div class="sx-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15h18l-2.5 4.5h-13z"/><path d="M6 15V9h9l2 6"/><path d="M9 9V5h3v4"/><path d="M2 21.5c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1"/></svg></div>
+          <div><div class="sx-k">Core sector</div><h3>Shipping, yards &amp; offshore</h3></div></div>
+        <p class="sx-who"><b>Who</b>Shipowners and managers, shipyards, system integrators, offshore operators</p>
+        <p class="sx-why">Class now asks for cyber resilience at delivery, while remote operations centres and vendor service make every vessel a connected site.</p>
+        <ul><li>UR E26 programme for newbuilds and fleet retrofits</li><li>Supplier E27 evidence and FAT / SAT witnessing</li><li>Vessel-to-shore and ROC connectivity security</li></ul>
+        <div class="sx-std"><span>IACS UR E26 / E27</span><span>IEC 61162-460</span><span>IEC 62443</span></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-top"><div class="sx-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="1.4"/><path d="M12 10.4V22"/><path d="M12 7.6 13 2"/><path d="M13.2 9.8 18.5 12"/><path d="M10.8 9.8 6 13"/><path d="M8 22h8"/></svg></div>
+          <div><div class="sx-k">Energy</div><h3>Offshore wind, substations &amp; shore power</h3></div></div>
+        <p class="sx-who"><b>Who</b>Wind developers, grid and utility operators, port electrification projects</p>
+        <p class="sx-why">Offshore substations and shore-power connections join the energy grid to the maritime world — two regulators, one network.</p>
+        <ul><li>Substation network segmentation and remote access</li><li>NIS2 obligations for energy-sector operators</li><li>Secure telemetry between turbines, vessels and shore</li></ul>
+        <div class="sx-std"><span>IEC 61850-3</span><span>IEC 62351</span><span>IEC 62443</span><span>NIS2</span></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-top"><div class="sx-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s5 5.5 5 9.5a5 5 0 0 1-10 0C7 8.5 12 3 12 3z"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
+          <div><div class="sx-k">Critical services</div><h3>Ports, water &amp; wastewater</h3></div></div>
+        <p class="sx-who"><b>Who</b>Port authorities and terminals, municipal water and wastewater utilities</p>
+        <p class="sx-why">Hundreds of unmanned pumping stations and port systems run on cellular links, often managed by small teams under new NIS2 duties.</p>
+        <ul><li>Risk-based security baseline for remote stations</li><li>Industrial 4G / 5G / 450 MHz connectivity design</li><li>Incident readiness and supplier access control</li></ul>
+        <div class="sx-std"><span>NIS2</span><span>Finnish Cybersecurity Act</span><span>IEC 62443</span></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-top"><div class="sx-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12"/><circle cx="9" cy="13" r=".8"/><circle cx="15" cy="13" r=".8"/><path d="M8 16l-3 5M16 16l3 5M7 19h10"/></svg></div>
+          <div><div class="sx-k">Transport</div><h3>Rail &amp; rolling stock</h3></div></div>
+        <p class="sx-who"><b>Who</b>Train operators, rolling-stock manufacturers, signalling and onboard integrators</p>
+        <p class="sx-why">Onboard train networks face the same problem as ships: safety systems, passenger Wi-Fi and train-to-ground links on one moving platform.</p>
+        <ul><li>Onboard network zoning and train-to-ground security</li><li>Railway cybersecurity requirements in procurement</li><li>Supplier evidence for certified onboard equipment</li></ul>
+        <div class="sx-std"><span>CLC/TS 50701</span><span>EN 50155</span><span>IEC 62443</span></div>
+      </article>
+    </div>
+    <div class="em-head">
+      <div class="eyebrow">Engagement models</div>
+      <h3>Choose the way of working that fits the project</h3>
+    </div>
+    <div class="em-grid"><div class="em"><div class="n">01</div><h4>Fixed-scope assessment</h4><p>Gap analysis against the applicable rules, delivered as a prioritised, costed roadmap.</p><span class="fit">Fits: first step, budget planning</span></div><div class="em"><div class="n">02</div><h4>Owner&#8217;s representative</h4><p>Embedded on the owner&#8217;s side from specification through yard, FAT / SAT and class approval.</p><span class="fit">Fits: newbuilds, major retrofits</span></div><div class="em"><div class="n">03</div><h4>Fractional security lead</h4><p>Part-time OT security lead for a fleet or operator, on a monthly retainer.</p><span class="fit">Fits: fleets without in-house OT security</span></div><div class="em"><div class="n">04</div><h4>Specialist subcontracting</h4><p>Maritime OT capacity for integrators, class-adjacent firms and consultancies, under their brand.</p><span class="fit">Fits: peak loads, niche expertise</span></div></div>
+  </div>
+</section>
+
+<section class="alt" id="voyage">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Career, plotted</div>
@@ -353,7 +415,7 @@
   </div>
 </section>
 
-<section class="alt" id="expertise">
+<section id="expertise">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Expertise</div>
@@ -389,7 +451,7 @@
   </div>
 </section>
 
-<section id="credentials">
+<section class="alt" id="credentials">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Credentials</div>
@@ -435,6 +497,7 @@
 </footer>
 
 <script src="script.js"></script>
-<script src="maritime.js"></script>
+<script src="diagram.js"></script>
+<script src="motion.js"></script>
 </body>
 </html>
