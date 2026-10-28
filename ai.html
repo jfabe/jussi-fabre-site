@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jussi Fabre — Agentic AI Prototypes</title>
+<meta name="description" content="Conduit and Fathom: two working prototypes by Jussi Fabre that apply IEC 62443 and IACS UR E26 to agentic AI in industrial, maritime and data centre environments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-ai">
+
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+        <circle cx="13" cy="13" r="11.5" stroke="#6E5BB0" stroke-width="1.4"/>
+        <path d="M13 3.5V6.5M13 19.5V22.5M3.5 13H6.5M19.5 13H22.5" stroke="#6E5BB0" stroke-width="1.4"/>
+        <circle cx="13" cy="13" r="2.6" fill="#163350"/>
+      </svg>
+      <span>Jussi Fabre</span>
+    </a>
+    <nav class="pagelinks">
+      <a href="maritime.html">Maritime</a>
+      <a href="index.html">Both</a>
+      <a href="cyber.html">Cyber</a>
+      <a href="ai.html" class="active">AI</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow">Agentic AI · OT Security · Maritime</div>
+    <h1>Security standards,<br>applied to AI agents</h1>
+    <div class="role">Two working prototypes, designed and built from concept to running tool.</div>
+    <p class="lede">AI agents are moving into real systems: calling APIs, reading sensors,
+      changing settings. Industry and shipping already have mature standards for exactly
+      this kind of risk. Conduit and Fathom apply them to agentic AI.</p>
+    <div class="coords mono">
+      <span>IEC 62443 ZONES &amp; CONDUITS</span>
+      <span>IACS UR E26</span>
+      <span>AI MODELS VIA API</span>
+      <span>DATA CENTRES</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:jussi.fabre@gmail.com?subject=Demo%20request%20%E2%80%94%20Conduit%20%2F%20Fathom">Request a demo</a>
+      <a class="btn btn-ghost" href="#conduit">Conduit ↓</a>
+      <a class="btn btn-ghost" href="#fathom">Fathom ↓</a>
+      <a class="btn btn-ghost" href="#datacentres">Data centres ↓</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why this matters</div>
+      <h2>Who decides what an agent may touch?</h2>
+    </div>
+    <div class="about-body">
+      <p>Organisations want AI agents in operations, on the bridge and in the control
+        room. Nobody wants an agent with unlimited access to a control system. The
+        question is not new: industrial security answered it years ago by grouping systems
+        into zones and controlling every connection between them.</p>
+      <p>These prototypes come from the overlap of 25+ years in OT/IT security and critical
+        infrastructure with a Master Mariner degree and deck officer sea service. The focus
+        is the architecture and the rules around AI, the part where industrial AI projects
+        succeed or fail.</p>
+    </div>
+    <div class="about-flags">
+      <span class="flag">Agentic AI</span>
+      <span class="flag">IEC 62443</span>
+      <span class="flag">IACS UR E26</span>
+      <span class="flag">AI governance</span>
+      <span class="flag">APIs &amp; integrations</span>
+      <span class="flag">Data centres</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONDUIT ============ -->
+<section class="alt" id="conduit">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" style="color:var(--teal)">Prototype 01 — Cyber</div>
+        <h2>Conduit</h2>
+      </div>
+    </div>
+    <div class="proto k-cyber">
+      <div>
+        <p class="lead-p">An agentic AI security gateway based on IEC 62443. Conduit sits
+          between AI agents and the systems they call through APIs, and decides what each
+          agent is allowed to do. Systems are grouped into security zones, and every
+          agent action passes through a controlled conduit.</p>
+        <div class="proto-tags">
+          <span class="ptag">IEC 62443</span><span class="ptag">Agentic AI</span><span class="ptag">Working prototype</span>
+        </div>
+        <h3 class="sub">What it does</h3>
+        <ul class="feat">
+          <li>Places agents and target systems into IEC 62443-style zones</li>
+          <li>Routes every agent action through a policy-controlled conduit</li>
+          <li>Allows, restricts or blocks actions according to zone and agent role</li>
+          <li>Records what agents attempted and what was permitted</li>
+        </ul>
+        <div class="why"><b>Why it matters</b>A familiar OT security model sets clear,
+          auditable limits on what AI agents can reach, before they get anywhere near a
+          control system.</div>
+      </div>
+      <div class="figure">
+        <svg viewBox="0 0 380 300" role="img" aria-label="AI agents reach IT and DMZ systems only through the Conduit gateway; direct access to the OT zone is blocked">
+          <defs>
+            <marker id="arc" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#55666B"/></marker>
+          </defs>
+          <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#142028">
+            <rect x="8" y="42" width="92" height="38" fill="#FBFCFB" stroke="#B9C4C0"/><text x="54" y="65" text-anchor="middle">AI agent A</text>
+            <rect x="8" y="131" width="92" height="38" fill="#FBFCFB" stroke="#B9C4C0"/><text x="54" y="154" text-anchor="middle">AI agent B</text>
+            <rect x="8" y="220" width="92" height="38" fill="#FBFCFB" stroke="#B9C4C0"/><text x="54" y="243" text-anchor="middle">AI agent C</text>
+
+            <rect x="140" y="26" width="90" height="248" fill="#EEF5F6" stroke="#2E8B9E" stroke-width="1.5"/>
+            <text x="185" y="138" text-anchor="middle" font-family="Fraunces, serif" font-size="17" font-weight="600" fill="#163350">Conduit</text>
+            <text x="185" y="158" text-anchor="middle" font-size="9.5" fill="#2E8B9E">POLICY · ZONES</text>
+            <text x="185" y="172" text-anchor="middle" font-size="9.5" fill="#2E8B9E">AUDIT LOG</text>
+
+            <rect x="268" y="26" width="104" height="72" fill="#FBFCFB" stroke="#B9C4C0" stroke-dasharray="4 3"/>
+            <text x="320" y="50" text-anchor="middle" font-size="9.5" fill="#55666B">ZONE · IT</text><text x="320" y="74" text-anchor="middle">Business apps</text>
+            <rect x="268" y="114" width="104" height="72" fill="#FBFCFB" stroke="#B9C4C0" stroke-dasharray="4 3"/>
+            <text x="320" y="138" text-anchor="middle" font-size="9.5" fill="#55666B">ZONE · DMZ</text><text x="320" y="162" text-anchor="middle">Historian</text>
+            <rect x="268" y="202" width="104" height="72" fill="#FBFCFB" stroke="#163350" stroke-width="1.3"/>
+            <text x="320" y="226" text-anchor="middle" font-size="9.5" fill="#163350">ZONE · OT</text><text x="320" y="250" text-anchor="middle">Control system</text>
+          </g>
+          <g stroke="#55666B" stroke-width="1.3" fill="none" marker-end="url(#arc)">
+            <path d="M100 61 L138 80"/><path d="M100 150 L138 150"/><path d="M100 239 L138 220"/>
+            <path d="M230 80 L266 64"/><path d="M230 150 L266 150"/>
+          </g>
+          <path d="M230 220 L266 238" stroke="#B0813A" stroke-width="1.4" stroke-dasharray="3 3" fill="none"/>
+          <g transform="translate(248,214)" stroke="#B0813A" stroke-width="2"><path d="M-5 -5 L5 5 M5 -5 L-5 5"/></g>
+        </svg>
+        <div class="cap">SIMPLIFIED VIEW — agents reach systems only through the conduit; writes into the OT zone are blocked by policy.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FATHOM ============ -->
+<section id="fathom">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" style="color:var(--brass)">Prototype 02 — Sea</div>
+        <h2>Fathom</h2>
+      </div>
+    </div>
+    <div class="proto k-sea">
+      <div>
+        <p class="lead-p">A vessel self-assessment of onboard AI-agent exposure against
+          IACS UR E26. Fathom shows a ship owner or operator how ready a vessel is for AI
+          agents on board, using the five E26 domains: Identify, Protect, Detect, Respond
+          and Recover.</p>
+        <div class="proto-tags">
+          <span class="ptag">IACS UR E26</span><span class="ptag">Maritime</span><span class="ptag">Working prototype</span>
+        </div>
+        <h3 class="sub">What it does</h3>
+        <ul class="feat">
+          <li>Scores each E26 domain in maturity bands: Not ready, Developing, Aligned</li>
+          <li>Radar view of strong and weak areas at a glance</li>
+          <li>Inventory of onboard AI agents with security-zone classification</li>
+          <li>Exports a readiness brief for the fleet or management team</li>
+          <li>Runs fully in the browser; no vessel data leaves the device</li>
+        </ul>
+        <div class="why"><b>Why it matters</b>E26 applies to new ships, and AI is
+          arriving on board faster than guidance for it. Fathom connects the two in a
+          format a superintendent or master can use, built with deck officer experience
+          behind it.</div>
+      </div>
+      <div class="figure">
+        <svg viewBox="0 0 340 300" role="img" aria-label="Example radar chart across the five IACS UR E26 domains">
+          <g transform="translate(170,152)" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#142028">
+            <polygon points="0,-108 102.7,-33.4 63.5,87.4 -63.5,87.4 -102.7,-33.4" fill="#FBFCFB" stroke="#D7DEDB"/>
+            <polygon points="0,-72 68.5,-22.2 42.3,58.3 -42.3,58.3 -68.5,-22.2" fill="none" stroke="#D7DEDB"/>
+            <polygon points="0,-36 34.2,-11.1 21.2,29.1 -21.2,29.1 -34.2,-11.1" fill="none" stroke="#D7DEDB"/>
+            <g stroke="#D7DEDB"><line x1="0" y1="0" x2="0" y2="-108"/><line x1="0" y1="0" x2="102.7" y2="-33.4"/><line x1="0" y1="0" x2="63.5" y2="87.4"/><line x1="0" y1="0" x2="-63.5" y2="87.4"/><line x1="0" y1="0" x2="-102.7" y2="-33.4"/></g>
+            <polygon points="0,-86 77,-25 31.8,43.7 -44.5,61.2 -51.4,-16.7" fill="#B0813A" fill-opacity=".18" stroke="#B0813A" stroke-width="2"/>
+            <g fill="#B0813A"><circle cx="0" cy="-86" r="3"/><circle cx="77" cy="-25" r="3"/><circle cx="31.8" cy="43.7" r="3"/><circle cx="-44.5" cy="61.2" r="3"/><circle cx="-51.4" cy="-16.7" r="3"/></g>
+            <text x="0" y="-118" text-anchor="middle" fill="#163350">IDENTIFY</text>
+            <text x="110" y="-30" text-anchor="start" fill="#163350">PROTECT</text>
+            <text x="68" y="106" text-anchor="middle" fill="#163350">DETECT</text>
+            <text x="-68" y="106" text-anchor="middle" fill="#163350">RESPOND</text>
+            <text x="-110" y="-30" text-anchor="end" fill="#163350">RECOVER</text>
+          </g>
+        </svg>
+        <div class="cap">ILLUSTRATIVE — radar view with sample data.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ DATA CENTRES ============ -->
+<section class="alt" id="datacentres">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Applied to data centres</div>
+        <h2>From prototype to the data centre build</h2>
+      </div>
+    </div>
+    <p class="dc-intro">A modern data centre is an industrial site at scale: building management,
+      power monitoring, cooling, fire and physical security, all of it OT. AI campuses add
+      dense power and liquid cooling, and operators increasingly want AI to run parts of it.
+      At the same time the builder works through a long chain of EPC contractors, MEP and
+      BMS integrators and equipment vendors, and NIS2 (in Finland, the Cybersecurity Act)
+      pushes security requirements down that whole supply chain.</p>
+
+    <div class="exp-grid">
+      <div class="exp-cell">
+        <div class="pattern">Conduit pattern</div>
+        <h3 class="dc">AI in operations, under control</h3>
+        <p class="body">Agents that tune cooling and energy use can read BMS, EPMS and DCIM
+          data freely, while every setpoint change passes a policy check and, where it
+          matters, a human approval. Gains in efficiency without handing an agent the keys
+          to the chillers.</p>
+      </div>
+      <div class="exp-cell">
+        <div class="pattern">Fathom pattern</div>
+        <h3 class="dc">Commissioning and handover readiness</h3>
+        <p class="body">A site self-assessment against IEC 62443 and NIS2 before handover:
+          zone by zone, with evidence, maturity bands and a readiness brief the owner can
+          sign off. Security becomes a measurable acceptance item, not a promise.</p>
+      </div>
+      <div class="exp-cell">
+        <div class="pattern">Conduit pattern</div>
+        <h3 class="dc">Contractor and vendor access</h3>
+        <p class="body">Dozens of integrators and OEMs need remote access during build and
+          warranty. The same conduit model gives each of them scoped, time-limited and
+          logged access, and closes it cleanly at handover.</p>
+      </div>
+      <div class="exp-cell">
+        <div class="pattern">Agent-assisted compliance</div>
+        <h3 class="dc">Reporting from existing data</h3>
+        <p class="body">EU energy-efficiency reporting for data centres and NIS2 evidence
+          draw on data the site already produces. Agents can compile it; people review and
+          sign. Less spreadsheet work, a better audit trail.</p>
+      </div>
+    </div>
+
+    <div class="lifecycle">
+      <div class="eyebrow">Contracting strategy</div>
+      <h3 class="lc-title">Security decided in the contract, not retrofitted after it</h3>
+      <p class="lc-lead">The cheapest moment to get OT security and AI governance right is
+        before the contracts are signed. Each phase of a data centre project has one decision
+        that costs little early and a great deal later.</p>
+      <div class="phases">
+        <div class="phase">
+          <h4>Design</h4>
+          <p>Security zones and target security levels written into the basis of design.</p>
+          <span class="std">IEC 62443-3-2</span>
+        </div>
+        <div class="phase">
+          <h4>Procurement</h4>
+          <p>Security and AI-use requirements in EPC, integrator and vendor contracts, with
+            clear ownership of each interface.</p>
+          <span class="std">IEC 62443-2-4 · 4-2</span>
+        </div>
+        <div class="phase">
+          <h4>Build &amp; FAT/SAT</h4>
+          <p>Security acceptance criteria tested like any other system requirement.</p>
+          <span class="std">IEC 62443-3-3</span>
+        </div>
+        <div class="phase">
+          <h4>Commissioning</h4>
+          <p>Evidence-based handover: asset inventory, zones verified, construction-phase
+            access closed.</p>
+          <span class="std">Readiness brief</span>
+        </div>
+        <div class="phase">
+          <h4>Operations</h4>
+          <p>NIS2 obligations owned by the operator, AI agents running inside agreed
+            limits.</p>
+          <span class="std">NIS2 · Cybersecurity Act</span>
+        </div>
+      </div>
+
+      <div class="role-box">
+        <div>
+          <div class="eyebrow">The role</div>
+          <h3>One interlocutor across the chain</h3>
+        </div>
+        <p>On the owner's or developer's side: translating between investors, EPC
+          contractors, integrators, operators and regulators, in Finnish, French and English.
+          Security and AI kept at the architecture and contract level, where they shape the
+          whole project rather than a single device.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Where it comes from</div>
+      <h2>Built on two disciplines</h2>
+    </div>
+    <div class="split">
+      <a class="split-card cyber" href="cyber.html">
+        <div class="k">Cyber → Conduit</div>
+        <h3>OT/IT security architecture</h3>
+        <p>IEC 62443 zones and conduits, NIS2, network architecture from telecom
+          backbones to industrial plants.</p>
+        <div class="go">View cyber profile →</div>
+      </a>
+      <a class="split-card sea" href="maritime.html">
+        <div class="k">Sea → Fathom</div>
+        <h3>Maritime operations</h3>
+        <p>Master Mariner degree, deck officer watchkeeping and classification survey
+          exposure behind every E26 question.</p>
+        <div class="go">View maritime profile →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Get in touch</div>
+    <h2>Demos available on request.</h2>
+    <p>Open to conversations about applying these ideas in data centre projects, shipping
+      and industry, as a role, a consulting engagement or a pilot.</p>
+    <div class="contact-row">
+      <a class="btn btn-primary" href="mailto:jussi.fabre@gmail.com">jussi.fabre@gmail.com</a>
+      <a class="btn btn-ghost" href="tel:+358451391677">+358 45 139 1677</a>
+      <a class="btn btn-ghost" href="https://fi.linkedin.com/in/jussi-fabre" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <div class="foot-bottom">
+      <span>JUSSI FABRE — KAARINA, FINLAND</span>
+      <span>TINYURL.COM/FABREJ</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
