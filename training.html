@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jussi Fabre — Training Plan</title>
+<meta name="description" content="Jussi Fabre's current professional development plan: a six-week maritime OT security programme (IACS UR E26/E27, DNV rules, NMEA and Modbus labs) and an eight-week AI architecture path, Oct–Dec 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-cyber">
+
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+        <circle cx="13" cy="13" r="11.5" stroke="#2E8B9E" stroke-width="1.4"/>
+        <path d="M13 3.5V6.5M13 19.5V22.5M3.5 13H6.5M19.5 13H22.5" stroke="#2E8B9E" stroke-width="1.4"/>
+        <circle cx="13" cy="13" r="2.6" fill="#163350"/>
+      </svg>
+      <span>Jussi Fabre</span>
+    </a>
+    <nav class="pagelinks">
+      <a href="maritime.html">Maritime</a>
+      <a href="index.html">Both</a>
+      <a href="cyber.html">Cyber</a>
+      <a href="datacenter.html">DC</a>
+      <a href="ai.html">AI</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow">Professional development · Oct – Dec 2026</div>
+    <h1>Training plan,<br>in the open</h1>
+    <div class="role">Deepening hands-on maritime OT security, and building AI architecture skills.</div>
+    <p class="lede">Two structured programmes run in parallel, about 18–20 hours a week in
+      total, with a concrete deliverable at the end of each week. Labs, notes and demos
+      are published on GitHub as they are completed.</p>
+    <div class="coords mono">
+      <span>IACS UR E26 / E27</span>
+      <span>IEC 62443</span>
+      <span>NMEA · MODBUS</span>
+      <span>AGENTIC AI</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#ot">Maritime OT ↓</a>
+      <a class="btn btn-ghost" href="#ai">AI architecture ↓</a>
+      <a class="btn btn-ghost" href="#parallel">Certification ↓</a>
+    </div>
+  </div>
+</section>
+
+<section id="ot">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Track 1 · 6 weeks · from 26 Oct 2026</div>
+      <h2>Maritime OT security programme</h2>
+    </div>
+    <p class="dc-intro">The aim is hands-on fluency in ship OT: the class rules that govern it,
+      the protocols that run on board, and the segmentation that protects them. It builds
+      on existing OT foundations (nuclear OT/IT support at AREVA NP, industrial and utility
+      clients at CGI, OT/IT architecture at Tietoevry, sea service and a RINA class survey)
+      and adds a documented lab.</p>
+    <div class="track-meta">
+      <span class="ptag">In progress</span>
+      <span class="ptag">8–10 h / week</span>
+      <span class="ptag">Lab on GitHub</span>
+    </div>
+    <div class="phases ph-3">
+      <div class="phase">
+        <h4>IACS UR E26 — the ship</h4>
+        <span class="when">WEEK 1</span>
+        <p>Full read of E26: the five functions (identify, protect, detect, respond,
+          recover), required documents per design, construction and operation phase,
+          and who owns each one — yard, integrator, owner or class.</p>
+        <span class="out">→ E26 requirements matrix</span>
+        <span class="std">IACS UR E26 · ships contracted from 1 Jul 2024</span>
+      </div>
+      <div class="phase">
+        <h4>E27, DNV rules &amp; BIMCO</h4>
+        <span class="when">WEEK 2</span>
+        <p>Supplier obligations under E27 and their link to IEC 62443-4-2; DNV class
+          rules and notations (Cyber secure, Essential, Advanced); the owner's view in
+          BIMCO; the IMO framework.</p>
+        <span class="out">→ Memo: where DNV goes beyond the IACS minimum</span>
+        <span class="std">UR E27 · DNV-RU-SHIP Pt.6 Ch.5 · DNV-CG-0325 · DNV-RP-0496 · BIMCO v5 · MSC-FAL.1/Circ.3/Rev.3</span>
+      </div>
+      <div class="phase">
+        <h4>Navigation &amp; NMEA lab</h4>
+        <span class="when">WEEK 3</span>
+        <p>OpenCPN with simulated NMEA data, traffic captured in Wireshark (GGA, RMC,
+          HDT, AIS), and a spoofed GPS sentence accepted without authentication.
+          Principles of IEC 61162-450 and the 61162-460 secure gateway.</p>
+        <span class="out">→ NMEA lab and spoofing test</span>
+        <span class="std">NMEA 0183 · IEC 61162-450 / -460</span>
+      </div>
+      <div class="phase">
+        <h4>Automation &amp; segmentation lab</h4>
+        <span class="when">WEEK 4</span>
+        <p>A simulated ballast pump on OpenPLC over Modbus TCP, unauthenticated register
+          writes, then an IT zone and an OT zone with a firewalled conduit and passive
+          monitoring (Zeek / Suricata) on the OT side.</p>
+        <span class="out">→ Documented lab on GitHub, mapped to E26</span>
+        <span class="std">Modbus TCP · IEC 62443-3-2 zones &amp; conduits</span>
+      </div>
+      <div class="phase">
+        <h4>Fathom assessment demo</h4>
+        <span class="when">WEEK 5</span>
+        <p>Fathom's questions checked against the E26 matrix and gaps filled, then a full
+          assessment of a sample ro-pax (IAS, PMS, ECDIS, cargo system), linked to
+          Conduit and the lab segmentation.</p>
+        <span class="out">→ Five-minute E26 assessment demo</span>
+        <span class="std">IACS UR E26 · IEC 62443</span>
+      </div>
+      <div class="phase">
+        <h4>Case studies &amp; portfolio</h4>
+        <span class="when">WEEK 6</span>
+        <p>Five written case studies (challenge, action, result) on nuclear OT, a class
+          survey at a shipyard, industrial clients, IT/OT boundary design and life on the
+          bridge, plus an OT-first profile.</p>
+        <span class="out">→ OT case studies and updated profile</span>
+        <span class="std">Portfolio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="ai">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Track 2 · 8 weeks · 19 Oct – 13 Dec 2026</div>
+      <h2>AI architecture path</h2>
+    </div>
+    <p class="dc-intro">A single build runs through the whole path: an IEC 62443 compliance
+      agent that is built, secured and governed step by step, first on Microsoft Foundry
+      and then on an open-source model served on-premises. Around 10 hours a week,
+      80&nbsp;% hands-on.</p>
+    <div class="track-meta">
+      <span class="ptag">In progress</span>
+      <span class="ptag">Target: AI-103</span>
+      <span class="ptag">Repo: foundry-agent-governance-lab</span>
+    </div>
+    <div class="phases ph-4">
+      <div class="phase">
+        <h4>LLM &amp; agent foundations</h4>
+        <span class="when">WEEK 1 · 19–25 OCT</span>
+        <p>Tokens, embeddings, context and the four agent patterns: tools, RAG,
+          multi-agent, human in the loop.</p>
+      </div>
+      <div class="phase">
+        <h4>First agent on Foundry</h4>
+        <span class="when">WEEK 2 · 26 OCT – 1 NOV</span>
+        <p>Foundry resource, project, model and agent hierarchy, treated like 62443
+          zones; first agent with a function tool.</p>
+      </div>
+      <div class="phase">
+        <h4>RAG in depth</h4>
+        <span class="when">WEEK 3 · 2–8 NOV</span>
+        <p>IACS and NIS2 corpus in Azure AI Search: chunking, hybrid search, reranking,
+          cited answers and a 20-question test set.</p>
+      </div>
+      <div class="phase">
+        <h4>Orchestration &amp; multi-agent</h4>
+        <span class="when">WEEK 4 · 9–15 NOV</span>
+        <p>Reviewer agent in Microsoft Agent Framework, the same system in LangGraph,
+          and an MCP server with its risks listed.</p>
+      </div>
+      <div class="phase">
+        <h4>On-prem LLM &amp; GPU infra</h4>
+        <span class="when">WEEK 5 · 16–22 NOV</span>
+        <p>Ollama and vLLM in Docker, Kubernetes basics, and what an AI cluster needs in
+          network, power, cooling and OT.</p>
+      </div>
+      <div class="phase">
+        <h4>Agent security &amp; governance</h4>
+        <span class="when">WEEK 6 · 23–29 NOV</span>
+        <p>Per-agent identity, least-privilege RBAC, Prompt Shields, OWASP LLM Top 10,
+          EU AI Act and ISO 42001.</p>
+        <span class="out">→ Agent governance model, built on zones &amp; conduits</span>
+      </div>
+      <div class="phase">
+        <h4>Evaluation &amp; LLMOps</h4>
+        <span class="when">WEEK 7 · 30 NOV – 6 DEC</span>
+        <p>Groundedness and safety evaluations, PyRIT red teaming, OpenTelemetry tracing
+          and an evaluation-gated CI/CD pipeline.</p>
+        <span class="out">→ One-page idea-to-production playbook</span>
+      </div>
+      <div class="phase">
+        <h4>Certification &amp; portfolio</h4>
+        <span class="when">WEEK 8 · 7–13 DEC</span>
+        <p>AI-103 exam (Azure AI Apps and Agents Developer Associate) and a published
+          repository with architecture, governance and playbook.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="parallel">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Running alongside</div>
+      <h2>Certification &amp; current awareness</h2>
+    </div>
+    <div class="cred-cols">
+      <ul class="cred-list">
+        <li><span class="tag">In progress</span><span><span class="name">IEC 62443 — IC32 Cybersecurity Risk Assessment for IACS</span><span class="issuer">ISA/IEC 62443 certificate programme</span></span></li>
+        <li><span class="tag">Planned</span><span><span class="name">AI-103: Azure AI Apps and Agents Developer Associate</span><span class="issuer">Microsoft · Dec 2026</span></span></li>
+        <li><span class="tag">Weekly</span><span><span class="name">Maritime cyber watch</span><span class="issuer">DNV Maritime, BIMCO and trade press — current incidents and rule changes</span></span></li>
+      </ul>
+      <div>
+        <p class="dc-intro" style="margin:0">Each week counts as done only once its
+          deliverable exists. Completed labs, demos and certificates are added to this
+          page and to the profile as they land.</p>
+        <a class="section-link" href="maritime.html">Maritime OT advisory →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Get in touch</div>
+    <h2>Happy to walk through the labs.</h2>
+    <p>Open to OT/IT security, maritime cyber and AI architecture roles and engagements —
+      remote, hybrid or on-site.</p>
+    <div class="contact-row">
+      <a class="btn btn-primary" href="mailto:jussi.fabre@protonmail.com">jussi.fabre@protonmail.com</a>
+      <a class="btn btn-ghost" href="tel:+358451391677">+358 45 139 1677</a>
+      <a class="btn btn-ghost" href="https://fi.linkedin.com/in/jussi-fabre" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <div class="foot-bottom">
+      <span>JUSSI FABRE — KAARINA, FINLAND</span>
+      <span>TINYURL.COM/FABREJ</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

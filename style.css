@@ -653,3 +653,11 @@ body.page-dc .sx-icon{ background:#E8F1EC; }
 .mx-cable{ fill:none; stroke:var(--navy); stroke-width:1.6; stroke-dasharray:5 5; opacity:.6; }
 .mx-figure[data-mode="flat"] .mx-cable{ opacity:0; }
 .mx-static{ animation:none !important; }
+
+/* ---------- Training page ---------- */
+.phases.ph-3{ grid-template-columns:repeat(3,1fr); }
+.phases.ph-4{ grid-template-columns:repeat(4,1fr); }
+@media(max-width:900px){ .phases.ph-3, .phases.ph-4{ grid-template-columns:1fr; } }
+.phase .when{ display:block; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--muted); letter-spacing:.04em; margin-top:2px; }
+.phase .out{ display:block; margin-top:10px; font-size:13px; color:var(--navy); }
+.track-meta{ display:flex; gap:10px; flex-wrap:wrap; margin:0 0 22px; }
