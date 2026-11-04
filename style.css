@@ -661,3 +661,30 @@ body.page-dc .sx-icon{ background:#E8F1EC; }
 .phase .when{ display:block; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--muted); letter-spacing:.04em; margin-top:2px; }
 .phase .out{ display:block; margin-top:10px; font-size:13px; color:var(--navy); }
 .track-meta{ display:flex; gap:10px; flex-wrap:wrap; margin:0 0 22px; }
+
+/* ---------- France ⇄ Finland single point of contact ---------- */
+section.bridge{
+  background:linear-gradient(90deg, rgba(22,51,80,.06) 0 3px, transparent 3px), var(--paper);
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+.flag-bridge{ text-decoration:none; color:var(--navy); border-color:var(--navy); }
+.flag-bridge:hover{ background:var(--navy); color:#fff; }
+.bridge-langs{
+  font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--navy);
+  display:flex; flex-direction:column; gap:4px; text-align:right;
+  border-right:3px solid var(--brass); padding-right:12px;
+}
+.bridge-langs span{ color:var(--teal); }
+.bridge-grid{ margin-top:32px; }
+.bridge-grid .exp-cell li.tagline{ padding:7px 0; border-bottom:1px dashed var(--line); line-height:1.45; }
+.bridge-grid .exp-cell li.tagline:last-child{ border-bottom:0; }
+.bridge-how{
+  margin-top:24px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px;
+}
+.bridge-how > div{ display:flex; gap:10px; font-size:14px; color:#33434A; line-height:1.45; }
+.bridge-how .k{ font-size:11.5px; color:var(--brass); padding-top:2px; }
+@media(max-width:800px){
+  .bridge-how{ grid-template-columns:1fr 1fr; }
+  .bridge-langs{ text-align:left; border-right:0; border-left:3px solid var(--brass); padding:0 0 0 12px; }
+}
+@media(max-width:480px){ .bridge-how{ grid-template-columns:1fr; } }
