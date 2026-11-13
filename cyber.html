@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jussi Fabre — OT/IT Cybersecurity Architect</title>
+<title>Jussi Fabre — OT/ICS Security Architect</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -34,17 +34,18 @@
 <section class="hero" id="top">
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="eyebrow">OT/IT Cybersecurity Architect</div>
+    <div class="eyebrow">OT/ICS Security Architect</div>
     <h1>Jussi Fabre</h1>
-    <div class="role">Network architecture, OT/ICS security, and multi-cloud delivery.</div>
-    <p class="lede">25+ years spanning telecom backbone engineering, industrial
-      control system security, and cloud architecture — currently advancing IEC
-      62443 and CISSP, with hands-on delivery for critical-infrastructure and
-      industrial clients.</p>
+    <div class="role">Industrial control system security for nuclear, industrial, maritime and critical-infrastructure environments.</div>
+    <p class="lede">OT network segmentation into zones and conduits, secure remote
+      access and OT risk assessment for industrial and critical-infrastructure
+      clients, hands-on IEC 62443-4-1/4-2 work on the product side, and OT experience
+      reaching from a nuclear environment to ships and shipyards — all built on 25+
+      years of carrier-grade network engineering.</p>
     <div class="coords mono">
       <span>60.4&deg;N — KAARINA, FINLAND</span>
       <span>IEC 62443 · NIS2</span>
-      <span>AZURE · GCP · AWS</span>
+      <span>NUCLEAR · INDUSTRY · MARITIME OT</span>
       <span>FI · FR · EN</span>
     </div>
     <div class="cta-row">
@@ -58,32 +59,79 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">About</div>
-      <h2>Architecture, from the backbone up</h2>
+      <h2>OT security, from the network up</h2>
     </div>
     <div class="about-body">
-      <p>I'm a Franco-Finnish OT/IT cybersecurity architect with 25+ years of
-        experience, starting in ISP backbone and telecom-core network engineering
-        and moving into industrial control system (OT/ICS) security and multi-cloud
-        architecture.</p>
-      <p>Recent work centres on IEC 62443 and NIS2-aligned security architecture
-        for industrial and critical-infrastructure clients — cloud and security
-        architecture on Azure, GCP, and AWS, FortiGate-based network security,
-        Infrastructure-as-Code delivery, and hybrid IT/OT monitoring built on
-        Microsoft Sentinel.</p>
-      <p>Based in Kaarina, Finland, with full EU work rights. Currently advancing
-        CISSP and IEC 62443 certifications.</p>
+      <p>I'm a Franco-Finnish OT/ICS security architect. My OT work spans a nuclear
+        environment at AREVA NP, industrial and critical-infrastructure clients at
+        Tietoevry, IEC 62443-4-1/4-2 product security on the supplier side, and
+        shipboard systems — from bridge watches at sea to a classification society
+        inspection at a shipyard.</p>
+      <p>Before OT, I spent two decades building carrier-grade networks for Nokia
+        Siemens Networks, Telenor and DE-CIX. That is not an IT detour: most OT
+        compromises arrive through the IT boundary, a remote-access path or a
+        supplier connection, and I design that boundary knowing exactly how both
+        sides of it are built.</p>
+      <p>Based in Kaarina, Finland, with full EU work rights.</p>
     </div>
     <div class="about-flags">
       <span class="flag">IEC 62443</span>
+      <span class="flag">Zones &amp; conduits</span>
+      <span class="flag">Secure remote access</span>
+      <span class="flag">OT risk assessment</span>
       <span class="flag">NIS2</span>
-      <span class="flag">Azure · GCP · AWS</span>
-      <span class="flag">FortiGate</span>
       <span class="flag">BGP / MPLS</span>
     </div>
   </div>
 </section>
 
-<section class="alt" id="voyage">
+<section class="alt" id="ot-record">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">OT/ICS track record</div>
+      <h2>Where the OT experience comes from</h2>
+    </div>
+    <div class="exp-grid cols-3 bridge-grid">
+      <div class="exp-cell">
+        <h3>Industrial &amp; critical infrastructure</h3>
+        <ul>
+          <li class="tagline">OT network segmentation into IEC 62443 zones and conduits</li>
+          <li class="tagline">Secure remote access to OT environments</li>
+          <li class="tagline">OT risk assessments, security documentation and guidelines</li>
+          <li class="tagline">Hybrid IT/OT monitoring on Microsoft Sentinel</li>
+        </ul>
+      </div>
+      <div class="exp-cell">
+        <h3>Nuclear &amp; product security</h3>
+        <ul>
+          <li class="tagline">OT/ICS security in a nuclear environment — AREVA NP</li>
+          <li class="tagline">Hands-on IEC 62443-4-1 / 4-2 on the product and supplier side</li>
+          <li class="tagline">Participation in incident response</li>
+          <li class="tagline">Work in a Katakri security environment</li>
+        </ul>
+      </div>
+      <div class="exp-cell">
+        <h3>Ships &amp; shipyards</h3>
+        <ul>
+          <li class="tagline">249 days of sea service operating shipboard systems from the bridge</li>
+          <li class="tagline">RINA classification inspection at a shipyard; newbuilding ICS exposure</li>
+          <li class="tagline">Class cyber notation preparation — see <a class="section-link" href="maritime.html">Maritime</a></li>
+          <li class="tagline">Fleet self-assessment prototype — see <a class="section-link" href="ai.html">Fathom</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-body" style="margin-top:32px">
+      <p><strong>Hands-on OT lab.</strong> I run my own OT network-monitoring lab —
+        CISA Malcolm with Zeek's ICS/OT protocol analyzers, Suricata and
+        Wireshark/tshark — for passive asset discovery and analysis of industrial
+        protocol traffic such as Modbus, S7comm, DNP3, BACnet and EtherNet/IP. I also
+        build working tools around IEC 62443, such as the
+        <a class="section-link" href="ai.html">Conduit</a> security gateway prototype.</p>
+    </div>
+  </div>
+</section>
+
+<section id="voyage">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Career, plotted</div>
@@ -97,9 +145,9 @@
         <div class="datetag">Mar 2025 — Jun 2026</div>
         <h3>OT/IT Security Architect</h3>
         <div class="org">Tietoevry Tech Services / Vivicta · Turku</div>
-        <p class="desc">IEC 62443 and NIS2-aligned security architecture for industrial
-          and critical-infrastructure clients; hybrid IT/OT monitoring built on
-          Microsoft Sentinel.</p>
+        <p class="desc">OT network segmentation (zones and conduits), secure remote
+          access and OT risk assessments under IEC 62443 and NIS2 for industrial and
+          critical-infrastructure clients; hybrid IT/OT monitoring on Microsoft Sentinel.</p>
       </div>
 
       <div class="stop">
@@ -155,14 +203,14 @@
         <h3>Earlier career</h3>
         <div class="org">AREVA NP · HP · JerseyTelecom · Getronics · Alcatel · Verizon/UUNET</div>
         <p class="desc">A decade of network and security engineering across France,
-          the UK, Jersey, and the Nordics, including OT/IT support in a nuclear
-          environment.</p>
+          the UK, Jersey, and the Nordics, including OT/ICS security work in a nuclear
+          environment at AREVA NP.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="expertise">
+<section class="alt" id="expertise">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Expertise</div>
@@ -170,22 +218,24 @@
     </div>
     <div class="exp-grid cols-3">
       <div class="exp-cell">
-        <h3>OT/ICS &amp; Network Security</h3>
+        <h3>OT/ICS Security</h3>
         <ul>
-          <li><span>Network Architecture &amp; Engineering</span><span class="yrs">25y</span></li>
           <li><span>OT/ICS Security — IEC 62443</span><span class="yrs">5y</span></li>
+          <li><span>Zones &amp; Conduits Segmentation</span><span class="yrs">Delivered</span></li>
+          <li><span>Secure Remote Access to OT</span><span class="yrs">Delivered</span></li>
+          <li><span>IEC 62443-4-1 / 4-2 Product Security</span><span class="yrs">Hands-on</span></li>
+          <li><span>Nuclear OT Environment — AREVA NP</span><span class="yrs">2000s</span></li>
           <li><span>Security Consulting, Design &amp; Audit</span><span class="yrs">10y</span></li>
-          <li><span>Telecom Backbone / ISP Networks</span><span class="yrs">13y</span></li>
-          <li><span>BGP / MPLS / IP Network Design</span><span class="yrs">15y</span></li>
         </ul>
       </div>
       <div class="exp-cell">
-        <h3>Cloud &amp; Cybersecurity</h3>
+        <h3>Network &amp; Cloud Foundation</h3>
         <ul>
-          <li><span>Azure Cloud Architecture</span><span class="yrs">5y</span></li>
+          <li><span>Network Architecture &amp; Engineering</span><span class="yrs">25y</span></li>
+          <li><span>BGP / MPLS / IP Network Design</span><span class="yrs">15y</span></li>
+          <li><span>Telecom Backbone / ISP Networks</span><span class="yrs">13y</span></li>
           <li><span>Multi-Cloud — Azure, GCP, AWS</span><span class="yrs">5y</span></li>
           <li><span>Cybersecurity Governance &amp; NIS2</span><span class="yrs">4y</span></li>
-          <li><span>Infrastructure as Code — Terraform, Bicep</span><span class="yrs">3y</span></li>
           <li><span>Fortinet / FortiGate Security</span><span class="yrs">3y</span></li>
         </ul>
       </div>
@@ -203,7 +253,7 @@
   </div>
 </section>
 
-<section class="alt" id="credentials">
+<section id="credentials">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Credentials</div>
@@ -213,7 +263,6 @@
       <ul class="cred-list">
         <li><span class="tag">In progress</span><span><span class="name">Maritime OT Security &amp; AI Architecture programmes</span><span class="issuer">Oct – Dec 2026 · <a class="section-link" href="training.html">See the training plan →</a></span></span></li>
         <li><span class="tag">In progress</span><span><span class="name">CISSP</span><span class="issuer">(ISC)&sup2;</span></span></li>
-        <li><span class="tag">In progress</span><span><span class="name">IEC 62443 — Cybersecurity for Industrial Automation &amp; Control Systems</span><span class="issuer">ISA/IEC pathway</span></span></li>
         <li><span class="tag done">Certified</span><span><span class="name">SC-200: Microsoft Security Operations Analyst</span><span class="issuer">Microsoft</span></span></li>
         <li><span class="tag done">Certified</span><span><span class="name">AZ-104: Microsoft Azure Administrator</span><span class="issuer">Microsoft</span></span></li>
         <li><span class="tag done">Certified</span><span><span class="name">AZ-900: Microsoft Azure Fundamentals</span><span class="issuer">Microsoft</span></span></li>
@@ -234,7 +283,7 @@
 <footer id="contact">
   <div class="wrap">
     <div class="eyebrow">Get in touch</div>
-    <h2>Open to OT/IT security, cloud, and industrial cybersecurity engagements.</h2>
+    <h2>Open to OT/ICS security, industrial and maritime cybersecurity engagements.</h2>
     <p>Based in Kaarina, Finland. Available for consulting, contracting, and
       advisory work across critical infrastructure and industrial clients —
       remote, hybrid, or on-site.</p>
@@ -245,7 +294,7 @@
     </div>
     <div class="foot-bottom">
       <span>JUSSI FABRE — KAARINA, FINLAND</span>
-      <span>IEC 62443 · CISSP IN PROGRESS</span>
+      <span>OT/ICS · IEC 62443 · NIS2</span>
     </div>
   </div>
 </footer>
