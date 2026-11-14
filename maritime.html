@@ -419,39 +419,28 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Ask for a quote</div>
-      <h2>Tell me what the ship or fleet needs</h2>
-    </div>
-    <div class="about-body" style="margin-bottom:28px">
-      <p>Every quote is tailored to the vessels, the class society and the timetable.
-        Tick the services of interest, add a few details, and the form prepares an
-        email you can review before sending. Nothing is sent or stored by this page.</p>
+      <h2>What do you need?</h2>
     </div>
     <form class="quote-form" id="quoteForm" novalidate>
       <fieldset class="q-grid">
-        <legend>Services of interest</legend>
-        <label class="q-item"><input type="checkbox" name="svc" value="Gap analysis"><span><b>Gap analysis</b><small>Onboard IT/OT inventory against Rec. 194 and the chosen notation</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Remediation"><span><b>Remediation</b><small>Zones and conduits, remote access, procedures in the SMS</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Survey readiness"><span><b>Survey readiness</b><small>Documentation file, mock survey, surveyor coordination</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Annual follow-up"><span><b>Annual follow-up</b><small>Review before each annual survey</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Newbuild support"><span><b>Newbuild support</b><small>Inventory, design description, E27 review, FAT / SAT</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Supplier E27 readiness"><span><b>Supplier E27 readiness</b><small>Product gap analysis and type-approval preparation</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Vetting readiness"><span><b>Vetting readiness</b><small>TMSA 3 Element 13, SIRE 2.0, RightShip</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Cyber drill & response plan"><span><b>Cyber drill &amp; response plan</b><small>Response plan and tabletop with command team</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Fractional maritime cyber lead"><span><b>Fractional maritime cyber lead</b><small>A named cyber lead a few days a month</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Ship network design"><span><b>Ship network design</b><small>Reference architecture, connectivity, remote access</small></span></label>
-        <label class="q-item"><input type="checkbox" name="svc" value="Something else"><span><b>Something else</b><small>Describe it in the message</small></span></label>
+        <legend>Tick one or more</legend>
+        <label class="q-item"><input type="checkbox" name="svc" value="Gap analysis"><span><b>Gap analysis</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Remediation"><span><b>Remediation</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Survey readiness"><span><b>Survey readiness</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Annual follow-up"><span><b>Annual follow-up</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Newbuild support"><span><b>Newbuild support</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Supplier E27 readiness"><span><b>Supplier E27 readiness</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Vetting readiness"><span><b>Vetting readiness</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Cyber drill & response plan"><span><b>Cyber drill &amp; response plan</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Fractional maritime cyber lead"><span><b>Fractional maritime cyber lead</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Ship network design"><span><b>Ship network design</b></span></label>
+        <label class="q-item"><input type="checkbox" name="svc" value="Something else"><span><b>Something else</b></span></label>
       </fieldset>
       <div class="q-fields">
-        <label>Name<input type="text" name="name" autocomplete="name"></label>
-        <label>Company<input type="text" name="company" autocomplete="organization"></label>
-        <label>Number and type of ships<input type="text" name="ships" placeholder="e.g. 3 RoRo, 1 newbuild"></label>
-        <label>Class society<select name="cls"><option value="">Not decided</option><option>DNV</option><option>Bureau Veritas</option><option>Lloyd's Register</option><option>RINA</option><option>ABS</option><option>ClassNK</option><option>Other</option></select></label>
-        <label>Timetable<input type="text" name="when" placeholder="e.g. survey in Q2 2027"></label>
-        <label>Preferred language<select name="lang"><option>English</option><option>Français</option><option>Suomi</option></select></label>
-        <label class="q-wide">Message<textarea name="msg" rows="4" placeholder="Anything that helps scope the work"></textarea></label>
+        <label class="q-wide">Ships, class society and timetable (optional)<textarea name="msg" rows="3"></textarea></label>
       </div>
       <div class="cta-row" style="margin-top:20px">
-        <button type="submit" class="btn btn-primary">Prepare quote request</button>
+        <button type="submit" class="btn btn-primary">Ask for a quote</button>
         <span class="q-note" id="quoteNote" aria-live="polite"></span>
       </div>
     </form>
@@ -465,14 +454,10 @@
     e.preventDefault();
     var svc=[].slice.call(f.querySelectorAll('input[name=svc]:checked')).map(function(x){return '- '+x.value;});
     var note=document.getElementById('quoteNote');
-    if(!svc.length){ note.textContent='Please tick at least one service.'; return; }
+    if(!svc.length){ note.textContent='Tick at least one.'; return; }
     note.textContent='';
-    var v=function(n){return (f.elements[n].value||'').trim();};
-    var body='Hello Jussi,\n\nI would like a quote for:\n'+svc.join('\n')+'\n\n'+
-      'Name: '+v('name')+'\nCompany: '+v('company')+'\nShips: '+v('ships')+'\nClass society: '+(v('cls')||'Not decided')+
-      '\nTimetable: '+v('when')+'\nPreferred language: '+v('lang')+'\n\n'+v('msg')+'\n';
-    var subj='Quote request'+(v('company')?' — '+v('company'):'');
-    window.location.href='mailto:jussi.fabre@protonmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    var body='Hello Jussi,\n\nPlease send a quote for:\n'+svc.join('\n')+'\n\n'+(f.elements.msg.value||'').trim()+'\n';
+    window.location.href='mailto:jussi.fabre@protonmail.com?subject='+encodeURIComponent('Quote request')+'&body='+encodeURIComponent(body);
   });
 })();
 </script>
@@ -526,7 +511,7 @@
       <div class="eyebrow">Engagement models</div>
       <h3>Choose the way of working that fits the project</h3>
     </div>
-    <div class="em-grid"><div class="em"><div class="n">01</div><h4>Fixed-scope assessment</h4><p>Gap analysis against the applicable rules, delivered as a prioritised, costed roadmap.</p><span class="fit">Fits: first step, budget planning</span></div><div class="em"><div class="n">02</div><h4>Owner&#8217;s representative</h4><p>Embedded on the owner&#8217;s side from specification through yard, FAT / SAT and class approval.</p><span class="fit">Fits: newbuilds, major retrofits</span></div><div class="em"><div class="n">03</div><h4>Fractional security lead</h4><p>Part-time OT security lead for a fleet or operator, on a monthly retainer.</p><span class="fit">Fits: fleets without in-house OT security</span></div><div class="em"><div class="n">04</div><h4>Specialist subcontracting</h4><p>Maritime OT capacity for integrators, class-adjacent firms and consultancies, under their brand.</p><span class="fit">Fits: peak loads, niche expertise</span></div></div>
+    <div class="em-grid"><div class="em"><div class="n">01</div><h4>Fixed-scope assessment</h4><p>Gap analysis against the applicable rules, delivered as a prioritised, costed roadmap.</p><span class="fit">Fits: first step, budget planning</span></div><div class="em"><div class="n">02</div><h4>Owner&#8217;s representative</h4><p>Embedded on the owner&#8217;s side from specification through yard, FAT / SAT and class approval.</p><span class="fit">Fits: newbuilds, major retrofits</span></div><div class="em"><div class="n">03</div><h4>Fractional security lead</h4><p>Part-time OT security lead for a fleet or operator.</p><span class="fit">Fits: fleets without in-house OT security</span></div><div class="em"><div class="n">04</div><h4>Specialist subcontracting</h4><p>Maritime OT capacity for integrators, class-adjacent firms and consultancies, under their brand.</p><span class="fit">Fits: peak loads, niche expertise</span></div></div>
   </div>
 </section>
 
